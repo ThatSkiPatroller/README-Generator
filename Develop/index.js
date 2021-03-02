@@ -54,12 +54,21 @@ inquirer
             name: "email"
         }
     ])
-    .then((response) =>
+    .then(({title, description, installation, usage, license, contributors, tests, githubinfo, email}) => {
+        
+    }
         genmarkdown
     )
 
 // TODO: Create a function to write README file
-function writeToFile('README.md', data) {}
+function writeToFile('README.md', data) {
+    fs.writeFile(`./$(fileName.toLowerCase().split('').join('')).md`, data, (err) => {
+        if (err) {
+            console.log(err)
+        }
+        console.log('Your README has been generated')
+    })
+}
 
 // TODO: Create a function to initialize app
 function init() {}
