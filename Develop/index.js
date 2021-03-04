@@ -32,9 +32,15 @@ const questions = [
             choices: ["Apache license 2.0", "IBM", "MIT", "ISC"]
         },
         {
-            type: "input",
-            message: "Did you ahve any contributors?",
-            name: "contributors"
+            type: "confirm",
+            message: "Do you have any contributors?",
+            name: "confirm"
+        },
+        {
+            type:"input",
+            message:"Who are the contributors?",
+            name:"contributors",
+            when: data => data.confirm === true
         },
         {
             type: "input",
@@ -47,7 +53,7 @@ const questions = [
             name: "githubinfo"
         },
         {
-            type: "input",
+            type: "box",
             message: "What is your email for questions?",
             name: "email"
         }, 

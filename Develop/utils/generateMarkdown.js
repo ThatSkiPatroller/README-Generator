@@ -16,7 +16,7 @@ function generateMarkdown(data) {
 # ${data.title}
 https://github.com/${data.Username}/${data.Title}
 # Description
-${data.description}
+${data.description} 
 # Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -29,7 +29,7 @@ ${data.installation}
 # Usage
 ${data.usage}
 # License
-
+![](https://img.shields.io/badge/LICENSE-${data.license}-<ORANGE>)
 # Contributing
 Contributors: ${data.contributors}
 # Testing
